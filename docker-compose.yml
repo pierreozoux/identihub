@@ -21,7 +21,6 @@ services:
 ## only active for developing..
 #      - .:/var/www/app:ro
 #      - /var/www/app/vendor:rw
-    restart: always
     networks:
         - external_network
         - internal_network
@@ -29,7 +28,6 @@ services:
   db:
     image: mysql
     env_file: .env.docker
-    restart: always
     volumes:
     - ./storage/mysql:/var/lib/mysql
     networks:
