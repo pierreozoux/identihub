@@ -31,7 +31,7 @@ services:
     env_file: .env.docker
     restart: always
     volumes:
-      - data-volume:/var/lib/mysql
+    - ./storage/mysql:/var/lib/mysql
     networks:
         - internal_network
 
@@ -40,6 +40,4 @@ networks:
     internal_network:
         internal: true
 
-volumes:
-  data-volume:
       
