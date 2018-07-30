@@ -4,13 +4,13 @@ services:
   web:
     image: nginx
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    - ./nginx.conf:/etc/nginx/nginx.conf:ro
     volumes_from:
-      - app
+    - app
     ports:
-      - 8080:80
+    - 8080:80
     networks:
-        - external_network
+    - external_network
 
   app:
     image: uracreative/identihub
@@ -23,8 +23,8 @@ services:
 #      - .:/var/www/app:ro
 #      - /var/www/app/vendor:rw
     networks:
-        - external_network
-        - internal_network
+    - external_network
+    - internal_network
         
   db:
     image: mysql
@@ -32,11 +32,9 @@ services:
     volumes:
     - ./storage/mysql:/var/lib/mysql
     networks:
-        - internal_network
+    - internal_network
 
 networks:
-    external_network:
-    internal_network:
-        internal: true
-
-      
+  external_network:
+  internal_network:
+    internal: true
