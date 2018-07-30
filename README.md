@@ -18,6 +18,7 @@ Identihub is an open-source web platform for brand and assets management. It is 
 
 ### Using docker 
 copy the .env.docker to .env (edit the file according to your own needs)
+Set the mysql password in this file.
 
 `$ docker-compose up`
 `$ docker-compose exec app php artisan migrate`
