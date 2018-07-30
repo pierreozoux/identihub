@@ -15,7 +15,7 @@ services:
   app:
     image: uracreative/identihub
     build: .
-    env_file: .env.docker
+    env_file: .env
 #    volumes:
 #      - ./../storage/app:/var/www/app/storage:rw
 #      - ./../storage/logo:/var/www/app/public/logo:rw
@@ -28,7 +28,7 @@ services:
         
   db:
     image: mysql
-    env_file: .env.docker
+    env_file: .env
     volumes:
     - ./storage/mysql:/var/lib/mysql
     networks:
