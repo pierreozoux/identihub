@@ -19,10 +19,10 @@ Identihub is an open-source web platform for brand and assets management. It is 
 ### Using docker 
 copy the .env.docker to .env (edit the file according to your own needs)
 
-`$ docker-compose run web php artisan migrate`
-`$ docker-compose run web php artisan db:seed`
-`$ docker-compose run web php artisan key:generate`
 `$ docker-compose up`
+`$ docker-compose exec app php artisan migrate`
+`$ docker-compose exec app php artisan db:seed`
+`$ docker-compose exec app php artisan key:generate`
 
 ---
 
